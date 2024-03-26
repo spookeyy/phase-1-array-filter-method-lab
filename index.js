@@ -1,16 +1,18 @@
 // Code your solution here
 function findMatching(drivers, searchName){
-    if (!searchName) {
-        return [];
-    }
 
     const loweredSearchName = searchName.toLowerCase();  //convert search name
-    const loweredDrivers = drivers.map(driver => driver.toLowerCase());
 
-    const matchingDrivers = loweredDrivers.filter(driver => driver == loweredSearchName)
+    const matchingDrivers = drivers.filter(
+        (driver) =>  driver.toLowerCase() == loweredSearchName
+        )
 
     return matchingDrivers;
 }
 
 let drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby'];
-console.log(findMatching(drivers, "Bobby"));
+console.log(findMatching(drivers, "Sammy"));
+
+function fuzzyMatch(params) {
+    
+}
